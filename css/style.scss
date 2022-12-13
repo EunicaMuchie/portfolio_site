@@ -1,0 +1,631 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  font-family: "Source Sans Pro";
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  ------                      CSS                 ------  */
+/*---VARIABLES--*/
+$white: white;
+$black: rgba(36, 35, 35, 0.9);
+$h4: rgb(221, 144, 0);
+@mixin button1 {
+  background: rgb(53, 129, 159);
+  color: $white;
+  font-size: 12px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+}
+@mixin button2 {
+  background: rgb(36, 35, 35);
+  color: $white;
+  font-size: 12px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+}
+@mixin button3 {
+  background: $white;
+  color: $black;
+  font-size: 12px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+}
+/*----END VARIABLES----*/
+
+.banner {
+  background: url("../img/bg-masthead.jpg");
+  background-position: left top cover;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+
+  .banner-inner {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    margin-top: 65%;
+    text-align: center;
+    h1 {
+      color: $black;
+      font-size: 35px;
+      padding: 10px 0px;
+      font-weight: bold;
+    }
+    p {
+      color: $black;
+      font-size: 15px;
+      padding-bottom: 20px;
+      font-weight: bold;
+      font-style: italic;
+    }
+    button {
+      @include button1;
+    }
+  }
+}
+
+#about {
+  height: 48vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+
+  .inner {
+    position: absolute;
+    margin: 80px 30px 0 30px;
+
+    h3 {
+      color: $black;
+      font-size: 23px;
+      padding-bottom: 15px;
+      font-weight: bold;
+    }
+    p {
+      opacity: 0.6;
+      font-size: 14px;
+      padding-bottom: 30px;
+    }
+    button {
+      @include button2;
+    }
+  }
+}
+
+#wwo {
+  background: rgb(53, 129, 159);
+  height: 170vh;
+  position: relative;
+  text-align: center;
+
+  .wwo-inner {
+    width: 100%;
+    position: absolute;
+    margin: 80px 0px;
+
+    h4 {
+      font-size: 13px;
+      color: $h4;
+      padding: 8px;
+      font-weight: bold;
+    }
+    h2 {
+      color: $white;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .content {
+      svg {
+        margin-top: 30px;
+        width: 25%;
+      }
+      h4 {
+        margin-top: -30px;
+        color: $white;
+        font-size: 20px;
+      }
+      p {
+        color: $white;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#next-web {
+  background: url("../img/bg-callout.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .nw-inner {
+    width: 100%;
+    position: absolute;
+    margin-top: 55%;
+
+    h2 {
+      margin-bottom: 30px;
+      color: $black;
+      font-size: 27px;
+      padding: 0 80px;
+      font-weight: bold;
+
+      span {
+        font-weight: regular;
+        font-style: italic;
+      }
+    }
+    button {
+      @include button1;
+    }
+  }
+}
+
+#projects {
+  height: 100%;
+  padding: 80px 0px;
+  text-align: center;
+
+  .prjct-inner {
+    width: 100%;
+    h4 {
+      font-size: 13px;
+      color: $h4;
+      padding: 8px;
+    }
+    h2 {
+      color: $black;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    #cntnt {
+      margin-top: 50px;
+
+      #p-file {
+        img {
+          position: relative;
+        }
+        .text {
+          background: rgba(0, 0, 0, 0.3);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding-top: 50px;
+          padding-left: 40px;
+          text-align: left;
+
+          h4 {
+            color: $white;
+            font-weight: bold;
+          }
+          p {
+            color: $white;
+            font-size: 13px;
+            padding-right: 30px;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#connect {
+  height: 40vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  background-color: rgb(53, 129, 159);
+
+  .c-inner {
+    position: absolute;
+    margin: 80px 30px 0 30px;
+
+    h3 {
+      color: $white;
+      font-size: 23px;
+      padding-bottom: 15px;
+      font-weight: bold;
+    }
+    .one {
+      @include button3;
+    }
+    .two {
+      @include button2;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  height: 28vh;
+  text-align: center;
+
+  .f-nav {
+    position: relative;
+    margin: 150px 0 80px 0;
+    #icon {
+      background: rgb(53, 129, 159);
+      padding: 15px 18px;
+      border-radius: 50%;
+      margin: 0px 20px 50px 20px;
+
+      i {
+        color: $white;
+
+        :hover {
+          color: $black;
+        }
+      }
+    }
+    #icon:nth-child(1) {
+      padding: 15px 20px;
+    }
+  }
+
+  #copyright {
+    color: rgba(36, 35, 35, 0.4);
+    font-size: 14px;
+
+    :hover {
+      color: rgb(53, 129, 159);
+    }
+  }
+}
+/*--------------------------------*/
+/*---------MEDIA QUERIES---------*/
+/*-------------------------------*/
+
+/*----------IPAD-----------*/
+@media (min-width: 756px) {
+  .banner {
+    height: 50vh;
+    background-size: contain;
+
+    .banner-inner {
+      margin-top: 25%;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  #about {
+    height: 28vh;
+    .inner {
+      width: 100%;
+      margin: 80px 0;
+    }
+  }
+
+  #wwo {
+    height: 68vh;
+
+    .wwo-inner {
+      h4 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+
+  #next-web {
+    .nw-inner {
+      margin-top: 45%;
+
+      h2 {
+        font-size: 35px;
+        padding: 0 250px;
+      }
+    }
+  }
+
+  #projects {
+    .prjct-inner {
+      h4 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+
+      #cntnt {
+        #p-file {
+          .text {
+            width: 97%;
+            left: 10px;
+            padding-top: 300px;
+
+            h4 {
+              bottom: 50px;
+              font-size: 15px;
+            }
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #connect {
+    .c-inner {
+      top: 19%;
+      left: 16%;
+      margin: 80px 30px 0 30px;
+    }
+  }
+}
+
+/*------------LAPTOP-------------*/
+@media (min-width: 1200px) {
+  .banner {
+    height: 90vh;
+    background-position: left;
+    background-size: cover;
+
+    .banner-inner {
+      margin-top: 20%;
+
+      h1 {
+        font-size: 70px;
+      }
+      p {
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      button {
+        padding: 20px 30px;
+      }
+    }
+  }
+
+  #about {
+    height: 45vh;
+    .inner {
+      width: 100%;
+      margin: 100px 0 80px 0;
+
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+
+  #wwo {
+    .wwo-inner {
+      margin: 100px 0;
+
+      h4 {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 45px;
+      }
+
+      .content {
+        svg {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  #next-web {
+    background-position: right;
+    height: 90vh;
+
+    .nw-inner {
+      margin-top: 20%;
+
+      h2 {
+        font-size: 45px;
+        padding: 0 550px;
+      }
+
+      button {
+        padding: 20px 30px;
+      }
+    }
+  }
+
+  #projects {
+    .prjct-inner {
+      h4 {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 45px;
+      }
+
+      #cntnt {
+        #p-file {
+          img {
+            height: 100%;
+          }
+          .text {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            left: 0px;
+            padding-top: 200px;
+            padding-left: 80px;
+            opacity: 0;
+
+            h4 {
+              bottom: 50px;
+              font-size: 16px;
+            }
+            p {
+              width: 80%;
+              font-size: 16px;
+            }
+          }
+          .text:hover {
+            transform: translate(5s ease-in);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  #connect {
+    height: 30vh;
+
+    .c-inner {
+      top: auto;
+      left: 0;
+      width: 100%;
+      margin: 80px 0 80px 0;
+
+      button {
+        margin: 0 10px;
+      }
+    }
+  }
+}
